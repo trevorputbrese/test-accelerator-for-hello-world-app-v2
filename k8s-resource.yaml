@@ -1,0 +1,9 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: test-accelerator-for-hello-world-app-v2
+spec:
+  git:
+    url: https://github.com/trevorputbrese/test-accelerator-for-hello-world-app-v2.git
+    ref:
+      branch: master

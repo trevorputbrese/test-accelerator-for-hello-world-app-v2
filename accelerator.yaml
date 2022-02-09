@@ -1,0 +1,30 @@
+accelerator:
+  displayName: test-accelerator-for-hello-world-app-v2
+  description: This accelerator doesn't actually do anything.  it's just a test.
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/carvel-logo.png
+  tags:
+    - yaml
+    - worthless
+    - test
+  options:
+    - name: greeting
+      label: Greeting
+      description: A sample option used to generate YAML.
+      defaultValue: Hello
+      display: true
+
+# To call on YTT all you need is the 'YTT' transform.
+# It requires no parameters.
+# What it does:
+#  - materializes all input files into a temporary input-folder
+#  - creates an empty output-folder
+#  - materializes options and derivedSymbols into a temporary <symbols.json> file
+#  - calls ytt like so:
+#      ytt -f <input-folder> \
+#           --data-values-file <symbols.json> \
+#           --output-files <output-folder>
+#  - takes the contents of the output folder to be the output of
+#    the YTT transform
+
+engine:
+  type: YTT
